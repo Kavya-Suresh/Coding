@@ -22,6 +22,18 @@ int64_t MaxPairwiseProductFaster(int n,int numbers[]) {
     }
 }
 
+int64_t MaxPairwiseProduct(int n,int numbers[]) {
+    int64_t product = 0;
+  
+    for (int i=0; i<n; ++i) {
+        for (int j=i+1; j<n; ++j) {
+            if (((int64_t)numbers[i])*numbers[j] > max_product) {
+                max_product = ((int64_t)(numbers[i]))*numbers[j];
+            }
+        }
+    }
+    return max_product;
+}	
 
 int main()
 {   int n,max1=0,max2=0;
