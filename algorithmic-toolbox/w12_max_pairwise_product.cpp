@@ -5,13 +5,7 @@
 
 using namespace std;
 
-int main()
-{   int n,max1=0,max2=0;
-    cin>>n;
-    int b[n];
-    for(int i=0;i<n;i++)
-        cin>>b[i];
-
+int64_t MaxPairwiseProductFaster(int n,int numbers[]) {
     if(n==2)
        cout<<int64_t(b[0])*int64_t(b[1]);    
     else        
@@ -25,6 +19,16 @@ int main()
             {   max2=i;}
         }
         cout<<int64_t(b[max1])*int64_t(b[max2]);
-    }    
+    }
+}
+
+
+int main()
+{   int n,max1=0,max2=0;
+    cin>>n;
+    int b[n];
+    for(int i=0;i<n;i++)
+        cin>>b[i];
+    MaxPairwiseProductFaster(n,b);
     return 0;
 }
