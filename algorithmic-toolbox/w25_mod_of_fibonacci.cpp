@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int pisan(int m) {
+int find_pisano(int m) {
     if(m <= 1) {
         return m;
     }    
@@ -51,7 +51,7 @@ int main() {
     long n,m,p;
     cin>>n;
     cin>>m;
-    p = pisan(m);
+    p = find_pisano(m);
     cout<<"\n"<<p;
     if(p != -1) {
         n = n%p;
