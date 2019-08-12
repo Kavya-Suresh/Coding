@@ -13,7 +13,7 @@ int last_fibo(int n) {
             swap(fib[0],fib[1]);
             fib[1]=(fib[0] + fib[1])%10;
             sum=sum%10+fib[1]%10;
-            cout<<"**"<<fib[1]<<"--"<<sum;
+            // cout<<"**"<<fib[1]<<"--"<<sum;
         }
         cout<<"\n";
         return sum%10;
@@ -21,9 +21,8 @@ int last_fibo(int n) {
 }
 
 int main() {
-    int n;
-    int p=60;
+    long n;
     cin>>n;    
-    cout<<"\nfibo:"<<last_fibo(n+1)<<"\n";
+    cout<<"\nfibo:"<<last_fibo((n+1)%60)<<"\n";
     return 0;
 }
