@@ -7,7 +7,9 @@ int last_fiborange(int m, int n) {
         return n;
     }    
     else {
-        int temp, fib[]={0,1}, sum=0;
+        int sum=0;
+        if(m<=1)   sum=1; 
+        int temp, fib[]={0,1};
         for(int i=2;i<n;i++) {
             cout<<"\n"<<i<<": ";
             swap(fib[0],fib[1]);
@@ -18,11 +20,11 @@ int last_fiborange(int m, int n) {
             else if(i>=m) {
                 sum=sum%10+fib[1]%10;
             }
-            cout<<"**"<<fib[1]<<"--"<<sum;;    
+            cout<<"**"<<fib[1]<<"--"<<sum;
         }
         cout<<"\n";
         return sum%10;
-    }    
+    }   
 }
 
 int main() {
